@@ -8,18 +8,23 @@ def main(sample)
   data = get_data(number)
   puts sample
 
-  json_data = data.to_json
-  json_data
+  # json_data = data.to_json
+  # json_data
+  data
 end
 
 def get_data(number)
   data = {
     'version' => 1.0,
     'response' => {
-      'type' => 'PlainText',
-      'text' => "#{number}部屋空いてます"
-    },
-    'shouldEndSession' => true
+      'outputSpeech' => {
+        'type' => 'PlainText',
+        'text' => "#{number}部屋空いてます"
+      },
+      'shouldEndSession' => true
+    }
   }
   data
 end
+
+main('hoge')
