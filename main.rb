@@ -2,7 +2,7 @@
 
 require 'json'
 
-def main
+def main(sample)
   number = 6
 
   data = {
@@ -18,6 +18,8 @@ def main
   puts sample
 
   puts data.to_json.class
+  puts '======='
+  puts sample
 
   return data.to_json
 end
