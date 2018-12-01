@@ -19,7 +19,7 @@ def get_data(number)
     'response' => {
       'outputSpeech' => {
         'type' => 'PlainText',
-        'text' => "#{number}部屋空いてます"
+        'text' => "#{number}部屋空いてます! こんにちは"
       },
       'shouldEndSession' => true
     }
