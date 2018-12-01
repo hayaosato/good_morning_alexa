@@ -14,12 +14,7 @@ def main(sample)
     'shouldEndSession' => true
   }
 
-  sample = 'hoge'
-  puts sample
+  data = JSON.pretty_generate(data)
 
-  puts data.to_json.class
-  puts '======='
-  puts sample
-
-  return data.to_json
+  return data
 end
