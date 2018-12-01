@@ -13,4 +13,9 @@ data = {
   'shouldEndSession' => true
 }
 
+sample = 'hoge'
+puts sample
+
+puts data.to_json.class
+
 return data.to_json
