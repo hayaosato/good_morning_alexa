@@ -8,8 +8,7 @@ def main(sample)
   data = get_data(number)
   puts sample
 
-  json_data = JSON.pretty_generate(data)
-
+  json_data = data.to_json
   json_data
 end
 
