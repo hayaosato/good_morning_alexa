@@ -2,20 +2,22 @@
 
 require 'json'
 
-number = 6
+def main
+  number = 6
 
-data = {
-  'version' => 1.0,
-  'response' => {
-    'type' => 'PlainText',
-    'text' => "#{number}部屋空いてます"
-  },
-  'shouldEndSession' => true
-}
+  data = {
+    'version' => 1.0,
+    'response' => {
+      'type' => 'PlainText',
+      'text' => "#{number}部屋空いてます"
+    },
+    'shouldEndSession' => true
+  }
 
-sample = 'hoge'
-puts sample
+  sample = 'hoge'
+  puts sample
 
-puts data.to_json.class
+  puts data.to_json.class
 
-return data.to_json
+  return data.to_json
+end
