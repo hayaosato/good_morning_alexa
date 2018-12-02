@@ -5,26 +5,30 @@ require 'json'
 def main(sample)
   number = 6
 
-  data = get_data(number)
+  data = build_response(number)
   puts sample
 
-  # json_data = data.to_json
-  # json_data
-  data
+  puts data
 end
 
-def get_data(number)
+def build_response(number)
+  output_speech = build_output_speech(number)
   data = {
     'version' => 1.0,
     'response' => {
-      'outputSpeech' => {
-        'type' => 'PlainText',
-        'text' => "#{number}部屋空いてます! こんにちは"
-      },
+      'output_speech' => output_speech,
       'shouldEndSession' => true
     }
   }
   data
 end
 
-main('hoge')
+def build_output_speech(number)
+  output_speech = {
+    'type' => 'PlainText',
+    'text' => "#{number}部屋空いてます! こんにちは"
+  }
+  output_speech
+end
+
+main('sample')
