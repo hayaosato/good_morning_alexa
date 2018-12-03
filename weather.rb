@@ -2,6 +2,7 @@
 require 'dotenv'
 require 'net/http'
 require 'json'
+require 'time'
 
 def access_weather
   # https://api.openweathermap.org/data/2.5/forecast
@@ -16,7 +17,9 @@ end
 
 def parse_data(json_data)
   hash_data = JSON.parse(json_data)
-  puts hash_data['list'][0]
+  utc_datetime = hash_data['list'][0]['dt_txt']
+  jst_datetime = Time.strptime(utc_datetime + '+0000', '%Y-%m-%d %H:%M:%S %z')
+  puts jst_datetime
 end
 
 Dotenv.load
