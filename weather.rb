@@ -14,13 +14,16 @@ module WeatherReport
     access_url = base_url + '?q=' + city + '&' + 'appid=' + api_key
     weather_data = Net::HTTP.get(URI.parse(access_url))
     time = parse_data(weather_data)
-    time
+    puts time
   end
 
   def parse_data(json_data)
     hash_data = JSON.parse(json_data)
-    utc_datetime = hash_data['list'][0]['dt_txt']
-    jst_datetime = Time.strptime(utc_datetime + '+0000', '%Y-%m-%d %H:%M:%S %z')
-    jst_datetime
+    weather_datetime = hash_data['list'][0]['dt_txt']
+    utc_datetime = Time.strptime(weather_datetime + '+0000', '%Y-%m-%d %H:%M:%S %z')
+    utc_datetime.localtime
   end
 end
+
+include WeatherReport
+access_weather
