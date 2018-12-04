@@ -10,7 +10,7 @@ module WeatherReport
     Dotenv.load
     base_url = 'https://api.openweathermap.org/data/2.5/forecast'
     today = Time.now
-    @fixed_time = Time.local(today.year, today.month, '5', '18', '00', '00')
+    @fixed_time = Time.local(today.year, today.month, today.day, '18', '00', '00')
     puts @fixed_time
     city = 'Tokyo,JP'
     api_key = ENV['WEATHER_KEY']
