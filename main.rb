@@ -32,7 +32,7 @@ class Alexa
   def build_output_speech
     output_speech = {
       'type' => 'PlainText',
-      'text' => "今日の天気は#{@weather}です。今日の運勢は第#{@rank}位で、#{@comment}"
+      'text' => "今日の天気は#{@weather}です。運勢は第#{@rank}位で、#{@comment}"
     }
     output_speech
   end
