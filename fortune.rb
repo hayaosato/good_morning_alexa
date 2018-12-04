@@ -10,7 +10,10 @@ def access_fortune
   access_url = base_url + today
   fortune_data = Net::HTTP.get(URI.parse(access_url))
   fortune_hash = JSON.parse(fortune_data)
-  puts fortune_hash['horoscope'][today][2]
+  constellation = fortune_hash['horoscope'][today][2]
+  # content = constellation['content']
+  # rank = constellation['rank']
+  constellation
 end
 
 access_fortune
