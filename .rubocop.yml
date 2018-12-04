@@ -1,0 +1,18 @@
+# 日本語でのコメントを許可
+AsciiComments:
+  Enabled: false
+
+AccessorMethodName:
+  Enabled: false
+
+AndOr:
+  Enabled: false
+
+LineLength:
+  Max: 100
+
+MethodLength:
+  Max: 15
+
+Metrics/AbcSize:
+  Max: 20
