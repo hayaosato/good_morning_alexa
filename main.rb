@@ -18,9 +18,9 @@ class Alexa
   def build_response
     output_speech = build_output_speech
     data = {
-      'version' => 1.0,
+      'version' => '1.0',
       'response' => {
-        'output_speech' => output_speech,
+        'outputSpeech' => output_speech,
         'shouldEndSession' => true
       }
     }
