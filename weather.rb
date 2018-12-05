@@ -1,5 +1,4 @@
 #! /usr/bin/ruby
-require 'dotenv'
 require 'net/http'
 require 'json'
 require 'time'
