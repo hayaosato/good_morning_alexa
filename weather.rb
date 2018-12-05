@@ -4,7 +4,14 @@ require 'net/http'
 require 'json'
 require 'time'
 
-# get weather report from openweathermap
+WEATHER_LIST = {
+  'Clear' => '晴れ',
+  'Clouds' => '曇り',
+  'rain' => '雨',
+  'snow' => '雪'
+}.freeze
+
+# get weatherreport from openweathermap
 module WeatherReport
   def access_weather
     Dotenv.load
@@ -17,6 +24,7 @@ module WeatherReport
     access_url = base_url + '?q=' + city + '&' + 'appid=' + api_key
     @weather_data = Net::HTTP.get(URI.parse(access_url))
     parse_data
+    weather_convert
     @weather
   end
 
@@ -30,5 +38,9 @@ module WeatherReport
         break
       end
     end
+  end
+
+  def weather_convert
+    @weather = WEATHER_LIST[@weather]
   end
 end
