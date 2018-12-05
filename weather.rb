@@ -13,7 +13,6 @@ WEATHER_LIST = {
 # get weatherreport from openweathermap
 module WeatherReport
   def access_weather
-    Dotenv.load
     base_url = 'https://api.openweathermap.org/data/2.5/forecast'
     today = Time.now
     @fixed_time = Time.local(today.year, today.month, today.day, '18', '00', '00')

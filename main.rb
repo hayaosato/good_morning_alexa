@@ -13,8 +13,6 @@ class Alexa
     @rank = constellation['rank']
     @comment = constellation['content']
     @weather = access_weather
-    data = build_response
-    puts data
   end
 
   def build_response
@@ -40,7 +38,8 @@ end
 
 def main(sample)
   puts sample
-  Alexa.new
+  alexa = Alexa.new
+  alexa.build_response
 end
 
 main('hoge')
