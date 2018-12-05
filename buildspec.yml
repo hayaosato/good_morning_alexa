@@ -1,5 +1,11 @@
 version: 0.2
 
+phases:
+  install:
+    commands:
+      - bundle install
 artifacts:
   files:
     - main.rb
+    - fortune.rb
+    - weather.rb
