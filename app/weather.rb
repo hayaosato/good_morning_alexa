@@ -6,8 +6,8 @@ require 'time'
 WEATHER_LIST = {
   'Clear' => '晴れ',
   'Clouds' => '曇り',
-  'rain' => '雨',
-  'snow' => '雪'
+  'Rain' => '雨',
+  'Snow' => '雪'
 }.freeze
 
 # get weatherreport from openweathermap

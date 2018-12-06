@@ -13,6 +13,7 @@ class Alexa
     @rank = constellation['rank']
     @comment = constellation['content']
     @weather = access_weather
+    puts @weather
   end
 
   def build_response
