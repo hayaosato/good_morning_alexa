@@ -6,6 +6,6 @@ phases:
       - bundle install
 artifacts:
   files:
-    - app/main.rb
-    - app/fortune.rb
-    - app/weather.rb
+    - main.rb
+    - fortune.rb
+    - weather.rb
