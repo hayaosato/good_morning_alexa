@@ -43,5 +43,3 @@ def main(sample)
   alexa = Alexa.new
   alexa.build_response
 end
-
-main('hoge')
